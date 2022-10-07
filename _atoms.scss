@@ -1,4 +1,11 @@
+
 @use 'variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,900&display=swap');
+
+
+
+
+
 
 // mixins to take care of repeated patterns.
 @mixin set-font($size: 1em, $line-height: normal, $font: $fonts-body) {
@@ -25,6 +32,7 @@
   padding-top: 1.5em;
 }
 // these styles here should describe how the atoms (elements) should appear most of the time.  They can be overridden at the molecule (block) as necessary
+h1,
 h2,
 h3,
 h4 {
@@ -32,26 +40,26 @@ h4 {
   margin: 0;
 }
 h1 {
-  background: $accent1;
-  color: $text-light;
+  
+  font-size: 6em;
+  font-weight: 900; /* Heavy */
+  color: $primary;
   display: inline-block;
-  font-weight: normal;
-  margin-bottom: 1em;
-  padding: 0.5em 1em;
+  padding: .25em 0 .25em 0;
 }
 h2 {
-  color: $text-light;
-  font-weight: 900; /* Heavy */
-  font-size: 6em;
+  font-size: 2.25em;
+  color: $accent2;
   letter-spacing: 1px;
   line-height: 1em;
+  font-weight: normal;
 }
 h3 {
-  font-size: 2.25em;
   font-weight: 200; /* Thin */
   letter-spacing: 1px;
   line-height: 1em;
   padding: 0.5em 0 0.25em 0;
+  color: $primary;
 }
 h4 {
   font-size: 1.5em;
@@ -62,7 +70,7 @@ h4 {
 }
 
 p {
-  @include set-font(1em, 1.5em);
+  @include set-font(1.5em, 1.5em);
   padding: 0.5em 0;
   margin: 0;
 }
