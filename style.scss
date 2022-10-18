@@ -1,7 +1,7 @@
 @use "variables" as *; //this puts all the variables in the global namespace.
-// @use 'atoms';
-//@use 'molecules';
-//@use 'organisms' as o;
+@use 'atoms';
+@use 'molecules';
+@use 'organisms' as o;
 
 * {
   box-sizing: border-box;
@@ -10,8 +10,28 @@ html {
   background-color: $background-color;
   padding: 5%;
 }
+body{
+  background:white;
+}
+header{
+  grid-area: header;
+}
+footer{
+  grid-area: footer;
+}
+.sidebar{
+  grid-area: sidebar;
+}
 
-body {
+
+.page-wrapper {
+  display:grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "header header footer"
+  ".. sidebar";
+  height: 100vh;
   font-family: $fonts-body;
   font-size: 85%;
   color: $text-dark;
