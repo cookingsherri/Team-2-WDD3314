@@ -10,32 +10,137 @@ html {
   background-color: $background-color;
   padding: 5%;
 }
-body{
-  background:white;
-}
-header{
-  grid-area: header;
-}
-footer{
-  grid-area: footer;
-}
-.sidebar{
-  grid-area: sidebar;
-}
-
-
-.page-wrapper {
-  display:grid;
-  grid-template-columns: 4fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: 
-  "header header footer"
-  ".. sidebar";
-  height: 100vh;
-  font-family: $fonts-body;
-  font-size: 85%;
+body {
+  // font-family: $fonts-body;
+  // font-size: 50%;
   color: $text-dark;
   background-color: $primary;
   margin: 0;
   padding: 1em;
 }
+  //SW -  change title to Retro Garden
+  h1 {
+    visibility: hidden;
+    
+  }
+  h1:before{
+    visibility: visible;
+    content: "CSS Retro Garden";
+    display: block;
+    height: 60px;  
+  }
+
+//SW - add dummy images
+.explanation h3::before{
+  content: "";
+  background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
+  padding-top: 800px;
+  display: block;
+}
+
+.participation h3::before{
+  content: "";
+  background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
+  padding-top: 800px;
+  display: block;
+}
+
+.benefits h3::before{
+  content: "";
+  background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
+  padding-top: 800px;
+  display: block;
+}
+
+.requirements h3::before{
+  content: "";
+  background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
+  padding-top: 800px;
+  display: block;
+
+}footer:before{
+  content: "";
+  background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
+  padding-top: 800px;
+  display: block;
+}
+
+@media (max-width: 800px) {
+
+ 
+ //SW - style paralax
+  .explanation h3::before{
+//  Create the parallax scrolling effect 
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.participation h3::before{
+ //  Create the parallax scrolling effect 
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.benefits h3::before{
+ //  Create the parallax scrolling effect 
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.requirements h3::before{
+ //  Create the parallax scrolling effect 
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+  
+}footer:before{
+  content: "";
+  //  Create the parallax scrolling effect 
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+  
+}
+
+//
+
+// body{
+//   background:white;
+// }
+// header{
+//   grid-area: header;
+// }
+// footer{
+//   grid-area: footer;
+// }
+// .sidebar{
+//   grid-area: sidebar;
+// }
+
+
+// .page-wrapper {
+//   display:grid;
+//   grid-template-columns: 4fr 1fr;
+//   grid-template-rows: auto;
+//   grid-template-areas: 
+//   "header header footer"
+//   ".. sidebar";
+//   height: 100vh;
+//   font-family: $fonts-body;
+//   font-size: 85%;
+//   color: $text-dark;
+//   background-color: $primary;
+//   margin: 0;
+//   padding: 1em;
+// }
+
+// SW - Media query for mobile design

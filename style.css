@@ -10,7 +10,7 @@ h4 {
 }
 
 h1 {
-  font-size: 6em;
+  font-size: 4em;
   font-weight: 900; /* Heavy */
   color: #5c9090;
   display: inline-block;
@@ -30,7 +30,7 @@ h3 {
   letter-spacing: 1px;
   line-height: 1em;
   padding: 0.5em 0 0.25em 0;
-  color: #5c9090;
+  color: #333;
 }
 
 h4 {
@@ -72,26 +72,9 @@ a:hover {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #fff;
-  padding: 15% 0;
-}
-.summary p:last-child {
-  border-top: 1px solid #bdcec6;
-  margin-top: 1em;
-  padding-top: 1.5em;
 }
 .summary a {
   color: #fff;
-}
-
-.preamble {
-  background: rgba(255, 255, 255, 0.9);
-  color: #333;
-  margin-left: -30%;
-  padding: 5% 5% 5% 30%;
-}
-
-.intro {
-  padding: 5%;
 }
 
 * {
@@ -104,33 +87,90 @@ html {
 }
 
 body {
-  background: white;
-}
-
-header {
-  grid-area: header;
-}
-
-footer {
-  grid-area: footer;
-}
-
-.sidebar {
-  grid-area: sidebar;
-}
-
-.page-wrapper {
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: "header header footer" ".. sidebar";
-  height: 100vh;
-  font-family: "Roboto", sans-serif;
-  font-size: 85%;
   color: #333;
   background-color: #5c9090;
   margin: 0;
   padding: 1em;
+}
+
+h1 {
+  visibility: hidden;
+}
+
+h1:before {
+  visibility: visible;
+  content: "CSS Retro Garden";
+  display: block;
+  height: 60px;
+}
+
+.explanation h3::before {
+  content: "";
+  background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
+  padding-top: 800px;
+  display: block;
+}
+
+.participation h3::before {
+  content: "";
+  background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
+  padding-top: 800px;
+  display: block;
+}
+
+.benefits h3::before {
+  content: "";
+  background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
+  padding-top: 800px;
+  display: block;
+}
+
+.requirements h3::before {
+  content: "";
+  background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
+  padding-top: 800px;
+  display: block;
+}
+
+footer:before {
+  content: "";
+  background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
+  padding-top: 800px;
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .explanation h3::before {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .participation h3::before {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .benefits h3::before {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .requirements h3::before {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  footer:before {
+    content: "";
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
