@@ -11,17 +11,18 @@
 }
 .summary {
   @include atoms.uppercase($text-light);
-  padding: 15% 0;
-  p:last-child {
-    @include atoms.divider;
-  }
+  //SW 
+  // p:last-child {
+  //   @include atoms.divider;
+  // }
   a {
     color: $text-light; //in this case the link wants to be light instead of the default dark
   }
 }
-.preamble {
-  background: rgba(255, 255, 255, 0.9);
-  color: $text-dark;
-  margin-left: -30%;
-  padding: 5% 5% 5% 30%;
-}
+// SW - This is not the styling we want so I commented it out.
+// .preamble {
+//   background: rgba(255, 255, 255, 0.9);
+//   color: $text-dark;
+//   margin-left: -30%;
+//   padding: 5% 5% 5% 30%;
+// }
