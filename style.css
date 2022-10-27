@@ -83,13 +83,11 @@ a:hover {
 
 html {
   background-color: #efe9db;
-  padding: 5%;
 }
 
 body {
   color: #333;
-  background-color: #5c9090;
-  margin: 0;
+  margin-left: 10px;
   padding: 1em;
 }
 
@@ -104,38 +102,197 @@ h1:before {
   height: 60px;
 }
 
+.summary {
+  color: black;
+}
+.summary a {
+  color: black;
+}
+
+/* sidebar styling */
+.sidebar {
+  display: grid;
+  grid-auto-flow: row;
+  margin: 20px;
+  border-radius: 15px;
+  height: 100%;
+  position: sticky;
+  align-self: start;
+  top: 0;
+  background: #f7b09c;
+  box-shadow: 10px 10px #f59d84;
+  width: 100%;
+  float: right;
+}
+
+.sidebar h3 {
+  margin-left: 10px;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
+.design-selection {
+  background: #e8b665;
+  margin: 20px;
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 10px 10px #e5ab4f;
+  width: 92%;
+  position: relative;
+  left: -35px;
+}
+
+.design-archives {
+  background: #bdcec6;
+  margin: 20px;
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 10px 10px #aec3b9;
+  width: 92%;
+  position: relative;
+  left: -35px;
+}
+
+.zen-resources {
+  background: #edcabd;
+  margin: 20px;
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 10px 10px #e8baa9;
+  width: 92%;
+  position: absolute;
+  left: -35px;
+}
+
+/* background container for content*/
+html::after {
+  content: "";
+  display: block;
+  background-color: white;
+  transform: rotate(5deg);
+  height: 100vh;
+  width: 70%;
+  position: sticky;
+  left: 30px;
+  z-index: -1;
+  grid-row: 2/3;
+}
+
+/* grid layout*/
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 2fr 15%;
+  grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr auto;
+  grid-auto-flow: row;
+  grid-gap: 20px;
+  font-size: 85%;
+  color: black;
+  background-color: transparent;
+  margin: 10px;
+  padding: 1em;
+}
+
+header {
+  grid-column: 1/4;
+  grid-row: 1/span1;
+  width: 100%;
+  background: white;
+  padding: 10px;
+  margin: 10px;
+}
+header::after footer {
+  visibility: visible;
+}
+
+.preamble {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.explanation,
+.participation,
+.benefits,
+.requirements {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+
+footer {
+  visibility: hidden;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  display: inline-block;
+  position: relative;
+}
+footer .zen-validate-html,
+footer .zen-validate-css,
+footer .zen-license,
+footer .zen-accessibility,
+footer .zen-github {
+  transform: rotate(20deg);
+}
+
+aside {
+  grid-column: 3/span 1;
+  grid-row-start: 1;
+  margin-top: 30px;
+  position: fixed;
+  height: 100vh;
+}
+
+/* designated footer*/
+.requirements p:last-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background: white;
+  padding: 25px;
+  width: 100%;
+}
+
+.preamble p:last-child::after {
+  content: "";
+  background: url(/images/rsz_pexels-mark-elliott-995487.jpg) no-repeat center;
+  padding-top: 500px;
+  display: block;
+}
+
 .explanation h3::before {
   content: "";
-  background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
-  padding-top: 800px;
+  background: white;
+  background: url(/images/rsz_pexels-mark-elliott-995487.jpg) no-repeat center;
+  padding-top: 500px;
+  object-fit: fill;
   display: block;
+  grid-column: 3/4;
+  max-width: 500px;
+  max-height: 500px;
+  grid-column: 2/3;
 }
 
 .participation h3::before {
   content: "";
   background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
-  padding-top: 800px;
+  padding-top: 500px;
   display: block;
 }
 
 .benefits h3::before {
   content: "";
   background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
-  padding-top: 800px;
+  padding-top: 500px;
   display: block;
 }
 
 .requirements h3::before {
   content: "";
   background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
-  padding-top: 800px;
-  display: block;
-}
-
-footer:before {
-  content: "";
-  background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
-  padding-top: 800px;
+  padding-top: 500px;
   display: block;
 }
 
