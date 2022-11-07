@@ -110,19 +110,22 @@ h1:before {
 }
 
 /* sidebar styling */
+.wrapper {
+  position: sticky;
+  align-self: start;
+  top: 5px;
+}
+
 .sidebar {
   display: grid;
-  grid-auto-flow: row;
   margin: 20px;
   border-radius: 15px;
   height: 100%;
   position: sticky;
-  align-self: start;
   top: 0;
   background: #f7b09c;
   box-shadow: 10px 10px #f59d84;
   width: 100%;
-  float: right;
 }
 
 .sidebar h3 {
@@ -135,37 +138,30 @@ a {
   color: black;
 }
 
-.design-selection {
-  background: #e8b665;
+.design-selection,
+.design-archives,
+.zen-resources {
   margin: 20px;
   border-radius: 15px;
   padding: 5px;
-  box-shadow: 10px 10px #e5ab4f;
   width: 92%;
   position: relative;
   left: -35px;
+}
+
+.design-selection {
+  background: #e8b665;
+  box-shadow: 10px 10px #e5ab4f;
 }
 
 .design-archives {
   background: #bdcec6;
-  margin: 20px;
-  border-radius: 15px;
-  padding: 5px;
   box-shadow: 10px 10px #aec3b9;
-  width: 92%;
-  position: relative;
-  left: -35px;
 }
 
 .zen-resources {
   background: #edcabd;
-  margin: 20px;
-  border-radius: 15px;
-  padding: 5px;
   box-shadow: 10px 10px #e8baa9;
-  width: 92%;
-  position: absolute;
-  left: -35px;
 }
 
 /* background container for content*/
@@ -255,40 +251,9 @@ aside {
   width: 100%;
 }
 
-.preamble p:last-child::after {
-  content: "";
-  background: url(/images/rsz_pexels-mark-elliott-995487.jpg) no-repeat center;
-  padding-top: 500px;
-  display: block;
-}
-
-.explanation h3::before {
-  content: "";
-  background: white;
-  background: url(/images/rsz_pexels-mark-elliott-995487.jpg) no-repeat center;
-  padding-top: 500px;
-  object-fit: fill;
-  display: block;
-  grid-column: 3/4;
-  max-width: 500px;
-  max-height: 500px;
-  grid-column: 2/3;
-}
-
-.participation h3::before {
-  content: "";
-  background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
-  padding-top: 500px;
-  display: block;
-}
-
-.benefits h3::before {
-  content: "";
-  background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
-  padding-top: 500px;
-  display: block;
-}
-
+.explanation h3::before,
+.participation h3::before,
+.benefits h3::before,
 .requirements h3::before {
   content: "";
   background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
@@ -297,36 +262,17 @@ aside {
 }
 
 @media (max-width: 800px) {
-  .explanation h3::before {
+  .participation h3::before,
+.benefits h3::before,
+.requirements h3::before,
+footer:before {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .participation h3::before {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .benefits h3::before {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .requirements h3::before {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  footer:before {
-    content: "";
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  .page-wrapper {
+    display: block;
   }
 }
 
