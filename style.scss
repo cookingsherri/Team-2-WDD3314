@@ -23,11 +23,11 @@ h1 {
 h1:before {
   visibility: visible;
   content: "";
-  background-image: url(/images/retro-logo-img.png);
+  background: url(/images/retro-logo-final.svg) no-repeat;
   display: block;
-  padding-top: 514px;
-  padding-right: 500px;
-  width: 500px;
+  padding-top: 300px;
+  padding-right: 355px;
+  width: 200px;
 }
 .summary {
   color: black;
