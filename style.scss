@@ -1,7 +1,7 @@
 @use "variables" as *; //this puts all the variables in the global namespace.
-@use 'atoms';
-@use 'molecules';
-@use 'organisms' as o;
+@use "atoms";
+@use "molecules";
+@use "organisms" as o;
 
 * {
   box-sizing: border-box;
@@ -15,255 +15,241 @@ body {
   color: $text-dark;
   margin-left: 10px;
   padding: 1em;
-  
 }
 //SW -  change title to Retro Garden
 h1 {
   visibility: hidden;
-    
 }
-h1:before{
-   visibility: visible;
-  content: "CSS Retro Garden";
+h1:before {
+  visibility: visible;
+  content: "";
+  background: url(/images/retro-logo-final.svg) no-repeat;
   display: block;
-  height: 60px;  
+  padding-top: 300px;
+  padding-right: 355px;
+  width: 200px;
 }
-.summary{
-  color:black;
-  a{
-    color:black;
+.summary {
+  color: black;
+  a {
+    color: black;
   }
 }
 
 /* sidebar styling */
-.sidebar{
-  display:grid;
-  grid-auto-flow:row;
-  margin:20px;
-  border-radius:15px;
-  height:100%;
-  position:sticky;
+.wrapper {
+  position: sticky;
   align-self: start;
+  top: 5px;
+}
+.sidebar {
+  display: grid;
+  margin: 20px;
+  border-radius: 15px;
+  height: 100%;
+  position: sticky;
   top: 0;
   background: #f7b09c;
-  box-shadow: 10px 10px darken(#f7b09c,5);
-  width:100%;
-  float:right;
+  box-shadow: 10px 10px darken(#f7b09c, 5);
+  width: 100%;
 }
-.sidebar h3{
-  margin-left:10px;
+.sidebar h3 {
+  margin-left: 10px;
 }
-a{
-  text-decoration:none;
+a {
+  text-decoration: none;
   list-style: none;
-  color:black;
+  color: black;
 }
-.design-selection{
+.design-selection,
+.design-archives,
+.zen-resources {
+  margin: 20px;
+  border-radius: 15px;
+  padding: 5px;
+  width: 92%;
+  position: relative;
+  left: -35px;
+}
+//SW I think we can do this with a mixin
+.design-selection {
   background: #e8b665;
-  margin:20px;
-  border-radius:15px;
-  padding:5px;
-  box-shadow: 10px 10px  darken(#e8b665,5);
-  width:92%;
-  position:relative;
-  left: -35px;
+  box-shadow: 10px 10px darken(#e8b665, 5);
 }
-.design-archives{
-  background:#bdcec6;
-  margin:20px;
-  border-radius:15px;
-  padding:5px;
-  box-shadow: 10px 10px darken(#bdcec6,5);
-  width:92%;
-  position:relative;
-  left: -35px;
+.design-archives {
+  background: #bdcec6;
+  box-shadow: 10px 10px darken(#bdcec6, 5);
 }
-.zen-resources{
-  background:#edcabd;
-  margin:20px;
-  border-radius:15px;
-  padding:5px;
-  box-shadow: 10px 10px darken(#edcabd,5);
-  width:92%;
-  position:absolute;
-  left: -35px;
+.zen-resources {
+  background: #edcabd;
+  box-shadow: 10px 10px darken(#edcabd, 5);
 }
 
 /* background container for content*/
-html::after{
-  content:"";
-  display:block;
-  background-color:white;
-  transform:rotate(5deg);
-  height:100vh;
-  width:70%;
-  position:sticky;
+html::after {
+  content: "";
+  display: block;
+  background-color: white;
+  transform: rotate(5deg);
+  height: 100vh;
+  width: 70%;
+  position: sticky;
   left: 30px;
-  z-index:-1;
-  grid-row:2/3;
+  z-index: -1;
+  grid-row: 2/3;
 }
 
 /* grid layout*/
+// .page-wrapper {
+//   display: grid;
+//   grid-template-columns: 2fr 2fr 15%;
+//   grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr auto;
+//   grid-auto-flow: row;
+//   grid-gap: 20px;
+//   font-size: 85%;
+//   color: black;
+//   background-color: transparent;
+//   margin: 10px;
+//   padding: 1em;
+// }
+// header {
+//   grid-column: 1/4;
+//   grid-row: 1 / span1;
+//   width: 100%;
+//   background: white;
+//   padding: 10px;
+//   margin: 10px;
+//   &::after {
+//     footer {
+//       visibility: visible;
+//     }
+//   }
+// }
+// .preamble {
+//   grid-column: 1/2;
+//   grid-row: 2/3;
+// }
+//SW Grid Layout
 .page-wrapper {
-  display:grid;
-  grid-template-columns: 2fr 2fr 15%;
-  grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr auto;
-  grid-auto-flow:row;
-  grid-gap:20px;
+  display: grid;
+  grid-template-columns: 1fr auto;
   font-size: 85%;
   color: black;
   background-color: transparent;
   margin: 10px;
   padding: 1em;
-
 }
-header{
-  grid-column:1/4;
-  grid-row:1/span1;
-  width:100%;
-  background:white;
-  padding:10px;
-  margin:10px;
-  &::after{
-    footer{
-      visibility: visible;
-    }
-  }
+header {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  width: 100%;
+  background: white;
+  padding: 10px;
+  margin: 10px;
 }
-.preamble{
+section#zen-intro {
   grid-column: 1/2;
-  grid-row:2/3;
 }
-.explanation,
-.participation,
-.benefits,
-.requirements{
-  grid-column:1/3;
-  grid-row:2/3;
+div#zen-supporting {
+  grid-column: 1/2;
 }
+<<<<<<< HEAD
 footer{
   grid-column:1/-1;
   grid-row:1/2;
   display:inline-block;
+=======
+div .preamble h3 {
+  grid-area: h3;
+}
+
+div .preamble p:nth-of-type(1) {
+  grid-area: p1;
+}
+div .preamble p:nth-of-type(2) {
+  grid-area: p2;
+}
+div .preamble p:nth-of-type(3) {
+  grid-area: p3;
+}
+.preamble {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "p1 h3"
+    "p2 h3"
+    "p3 h3";
+}
+footer {
+  visibility: hidden;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  display: inline-block;
+  position: relative;
+>>>>>>> 3e6be97269e869ed1ad4a06bd77b89102b8824ce
   .zen-validate-html,
   .zen-validate-css,
   .zen-license,
   .zen-accessibility,
-  .zen-github{
-    transform:rotate(20deg);
+  .zen-github {
+    transform: rotate(20deg);
   }
 }
 
-aside{
-  grid-column:3/span 1;
-  grid-row-start:1;
-  margin-top:30px;
-  position:fixed;
-  height:100vh;
+aside {
+  grid-column: 3 / span 1;
+  grid-row-start: 1;
+  margin-top: 30px;
+  position: fixed;
+  height: 100vh;
 }
 
 /* designated footer*/
-.requirements p:last-child{
-  grid-column-start:1;
-  grid-column-end:3;
-  grid-row-start:3;
-  grid-row-end:4;
-  background:white;
-  padding:25px;
-  width:100%;
+.requirements p:last-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background: white;
+  padding: 25px;
+  width: 100%;
 }
 
-
-
-//SW - add dummy images
-.preamble p:last-child::after{
-  content: "";
-  background: url(/images/rsz_pexels-mark-elliott-995487.jpg) no-repeat center;
-  padding-top: 500px;
-  display: block;
-}
-
-.explanation h3::before{
-  content: "";
-  background:white;
-    background: url(/images/rsz_pexels-mark-elliott-995487.jpg) no-repeat center;
-  padding-top: 500px;
-  object-fit:fill;
-  display: block;
-  grid-column:3/4;
-  max-width: 500px;
-  max-height: 500px;
-  grid-column:2/3;
-}
-
-.participation h3::before{
+.intro h3:before,
+.explanation h3::before,
+.participation h3::before,
+.benefits h3::before,
+.requirements h3::before {
   content: "";
   background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
   padding-top: 500px;
   display: block;
 }
-
-.benefits h3::before{
-  content: "";
-  background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
-  padding-top: 500px;
-  display: block;
-}
-
-.requirements h3::before{
-  content: "";
-  background: url(/images/dummy-img.jpg&text=cool+retro+photo) no-repeat center;
-  padding-top: 500px;
-  display: block;
-
-}
-
-
 
 @media (max-width: 800px) {
+  .preamble {
+    display: block;
+  }
 
- 
- //SW - style paralax
-  .explanation h3::before{
-//  Create the parallax scrolling effect 
- background-attachment: fixed;
- background-position: center;
- background-repeat: no-repeat;
- background-size: cover;
-}
-
-.participation h3::before{
- //  Create the parallax scrolling effect 
- background-attachment: fixed;
- background-position: center;
- background-repeat: no-repeat;
- background-size: cover;
-}
-
-.benefits h3::before{
- //  Create the parallax scrolling effect 
- background-attachment: fixed;
- background-position: center;
- background-repeat: no-repeat;
- background-size: cover;
-}
-
-.requirements h3::before{
- //  Create the parallax scrolling effect 
- background-attachment: fixed;
- background-position: center;
- background-repeat: no-repeat;
- background-size: cover;
-  
-}footer:before{
-  content: "";
-  //  Create the parallax scrolling effect 
- background-attachment: fixed;
- background-position: center;
- background-repeat: no-repeat;
- background-size: cover;
-}
-  
+  intro h3:before,
+  .explanation h3:before,
+  .participation h3::before,
+  .benefits h3::before,
+  .requirements h3::before,
+  footer:before {
+    //  Create the parallax scrolling effect
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  aside {
+    grid-column: 1/2;
+    grid-row: 3;
+  }
 }
 
 //
@@ -281,12 +267,11 @@ aside{
 //   grid-area: sidebar;
 // }
 
-
 // .page-wrapper {
 //   display:grid;
 //   grid-template-columns: 4fr 1fr;
 //   grid-template-rows: auto;
-//   grid-template-areas: 
+//   grid-template-areas:
 //   "header header footer"
 //   ".. sidebar";
 //   height: 100vh;
