@@ -153,12 +153,6 @@ section#zen-intro {
 div#zen-supporting {
   grid-column: 1/2;
 }
-<<<<<<< HEAD
-footer{
-  grid-column:1/-1;
-  grid-row:1/2;
-  display:inline-block;
-=======
 div .preamble h3 {
   grid-area: h3;
 }
@@ -189,7 +183,6 @@ footer {
   grid-row: 1/2;
   display: inline-block;
   position: relative;
->>>>>>> 3e6be97269e869ed1ad4a06bd77b89102b8824ce
   .zen-validate-html,
   .zen-validate-css,
   .zen-license,

@@ -235,9 +235,11 @@ div .preamble p:nth-of-type(3) {
 }
 
 footer {
+  visibility: hidden;
   grid-column: 1/-1;
   grid-row: 1/2;
   display: inline-block;
+  position: relative;
 }
 footer .zen-validate-html,
 footer .zen-validate-css,
