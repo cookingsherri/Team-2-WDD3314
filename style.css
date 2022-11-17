@@ -206,11 +206,11 @@ header {
   margin: 10px;
 }
 
-section#zen-intro {
+section.zen-intro {
   grid-column: 1/2;
 }
 
-div#zen-supporting {
+div.zen-supporting {
   grid-column: 1/2;
 }
 
