@@ -56,9 +56,13 @@ a {
   transition: border-color 0.2s ease-in-out;
 }
 
-a:hover {
+li:hover {
   border-color: #bdcec6;
-  font-size: 1.3rem;
+  font-size: 1.01rem;
+}
+
+ul {
+  line-height: 30px;
 }
 
 [role=banner] > h1 {
@@ -118,6 +122,7 @@ h1:before {
   position: sticky;
   align-self: start;
   top: 5px;
+  width: 350px;
 }
 
 .sidebar {

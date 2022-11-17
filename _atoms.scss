@@ -74,7 +74,10 @@ a {
   text-decoration: none;
   transition: border-color 0.2s ease-in-out;
 }
-a:hover {
+li:hover {
   border-color: $accent1;
-  font-size: 1.3rem;
+  font-size: 1.01rem;
+}
+ul {
+  line-height: 30px;
 }

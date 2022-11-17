@@ -41,6 +41,7 @@ h1:before {
   position: sticky;
   align-self: start;
   top: 5px;
+  width: 350px;
 }
 .sidebar {
   display: grid;
@@ -217,36 +218,3 @@ aside {
     grid-row: 3;
   }
 }
-
-//
-
-// body{
-//   background:white;
-// }
-// header{
-//   grid-area: header;
-// }
-// footer{
-//   grid-area: footer;
-// }
-// .sidebar{
-//   grid-area: sidebar;
-// }
-
-// .page-wrapper {
-//   display:grid;
-//   grid-template-columns: 4fr 1fr;
-//   grid-template-rows: auto;
-//   grid-template-areas:
-//   "header header footer"
-//   ".. sidebar";
-//   height: 100vh;
-//   font-family: $fonts-body;
-//   font-size: 85%;
-//   color: $text-dark;
-//   background-color: $primary;
-//   margin: 0;
-//   padding: 1em;
-// }
-
-// SW - Media query for mobile design
