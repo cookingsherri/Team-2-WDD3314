@@ -1,11 +1,5 @@
-
-@use 'variables' as *;
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,900&display=swap');
-
-
-
-
-
+@use "variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,900&display=swap");
 
 // mixins to take care of repeated patterns.
 @mixin set-font($size: 1em, $line-height: normal, $font: $fonts-body) {
@@ -40,12 +34,11 @@ h4 {
   margin: 0;
 }
 h1 {
-  
   font-size: 4em; //SW - changed font size to 4em
   font-weight: 900; /* Heavy */
   color: $primary;
   display: inline-block;
-  padding: .25em 0 .25em 0;
+  padding: 0.25em 0 0.25em 0;
 }
 h2 {
   font-size: 2.25em;
@@ -83,4 +76,5 @@ a {
 }
 a:hover {
   border-color: $accent1;
+  font-size: 1.3rem;
 }
