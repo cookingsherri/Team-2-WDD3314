@@ -118,10 +118,10 @@ header {
   margin: 10px;
 }
 //SW Grid Layout
-section.zen-intro {
+section #zen-intro {
   grid-column: 1/2;
 }
-div.zen-supporting {
+div #zen-supporting {
   grid-column: 1/2;
 }
 div .preamble h3 {
