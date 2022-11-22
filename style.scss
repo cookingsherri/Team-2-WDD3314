@@ -25,9 +25,10 @@ h1:before {
   content: "";
   background: url(/images/retro-logo-final.svg) no-repeat;
   display: block;
-  padding-top: 300px;
-  padding-right: 355px;
-  width: 200px;
+  padding-top: 50%;
+  padding-right: 50%;
+  margin-left: 5rem;
+  margin-top: 5rm
 }
 .summary {
   color: black;
@@ -52,6 +53,16 @@ h1:before {
   background: #f7b09c;
   box-shadow: 10px 10px darken(#f7b09c, 5);
   width: 100%;
+}
+.aside.sidebar {
+  display: grid;
+  grid: [stack] 1fr / min-content [stack] 1fr;
+  min-height: 100vh;
+}
+@media (max-width: 540px) {
+  .aside.sidebar > * {
+    grid-area: stack;
+  }
 }
 .sidebar h3 {
   margin-left: 10px;
@@ -145,7 +156,10 @@ header {
   width: 100%;
   background: white;
   padding: 10px;
-  margin: 10px;
+  position: fixed;
+  margin-top: -5rem;
+  margin-left: -3rem;
+  max-height: 17rem;
 }
 section#zen-intro {
   grid-column: 1/2;
